@@ -1,9 +1,6 @@
 package edu.westga.cs3211.project1.view;
 
 import java.io.IOException;
-
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +8,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.Pane;
 
+/**
+ * this class is the CodeBehind for the review Stock changes page
+ * @author Kyron Joseph
+ * @version 11/15/2025
+ */
 public class StockChangesCodeBehind {
 	
 	@FXML
@@ -23,13 +25,12 @@ public class StockChangesCodeBehind {
     private Pane viewPane;
     
     @FXML
-    void GoBackOnAction(ActionEvent event) throws IOException {
+    void goBackOnAction(ActionEvent event) throws IOException {
     	FXMLLoader loader = new FXMLLoader(getClass().getResource("LandingPageQuaterMaster.fxml"));
     	Pane newContent = loader.load();
-        viewPane.getChildren().clear();
-        viewPane.getChildren().add(newContent);
+        this.viewPane.getChildren().clear();
+        this.viewPane.getChildren().add(newContent);
 
     }
-    
-
+   
 }

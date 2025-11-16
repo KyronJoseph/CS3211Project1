@@ -22,39 +22,64 @@ class TestInventory {
 	}
 	
 	@Test
-	void testInventoryHasNoFreeSpace() {
+	void testComparmentOneHasNoFreeSpace() {
 		Inventory inv = new Inventory();
 		
 		Stock stock = new Stock("10", "flammable", "Apple", "Good", "12/25/2025");
-		inv.addStock(stock);
+		inv.addStockToCompartment1(stock);
 		Stock stock2 = new Stock("10", "flammable", "Apple", "Good", "12/25/2025");
-		inv.addStock(stock2);
+		inv.addStockToCompartment1(stock2);
 		Stock stock3 = new Stock("10", "flammable", "Apple", "Good", "12/25/2025");
-		inv.addStock(stock3);
+		inv.addStockToCompartment1(stock3);
 		Stock stock4 = new Stock("10", "flammable", "Apple", "Good", "12/25/2025");
-		inv.addStock(stock4);
+		inv.addStockToCompartment1(stock4);
 		Stock stock5 = new Stock("10", "flammable", "Apple", "Good", "12/25/2025");
-		inv.addStock(stock5);
+		inv.addStockToCompartment1(stock5);
 		Stock stock6 = new Stock("10", "flammable", "Apple", "Good", "12/25/2025");
-		inv.addStock(stock6);
+		inv.addStockToCompartment1(stock6);
 		Stock stock7 = new Stock("10", "flammable", "Apple", "Good", "12/25/2025");
-		inv.addStock(stock7);
+		inv.addStockToCompartment1(stock7);
 		Stock stock8 = new Stock("10", "flammable", "Apple", "Good", "12/25/2025");
-		inv.addStock(stock8);
+		inv.addStockToCompartment1(stock8);
 		Stock stock9 = new Stock("10", "flammable", "Apple", "Good", "12/25/2025");
-		inv.addStock(stock9);
+		inv.addStockToCompartment1(stock9);
 		Stock stock10 = new Stock("10", "flammable", "Apple", "Good", "12/25/2025");
-		inv.addStock(stock10);
-		
-		
-		
+		inv.addStockToCompartment1(stock10);
 		
 		boolean actual = inv.hasFreeSpace();
 		
 		assertFalse(actual);
 	}
 	
-
-
+	@Test
+	void testComparmentTwoHasNoFreeSpace() {
+		Inventory inv = new Inventory();
+		
+		Stock stock = new Stock("10", "flammable", "Apple", "Good", "12/25/2025");
+		inv.addStockToCompartment2(stock);
+		Stock stock2 = new Stock("10", "flammable", "Apple", "Good", "12/25/2025");
+		inv.addStockToCompartment2(stock2);
+		Stock stock3 = new Stock("10", "flammable", "Apple", "Good", "12/25/2025");
+		inv.addStockToCompartment2(stock3);
+		Stock stock4 = new Stock("10", "flammable", "Apple", "Good", "12/25/2025");
+		inv.addStockToCompartment2(stock4);
+		Stock stock5 = new Stock("10", "flammable", "Apple", "Good", "12/25/2025");
+		inv.addStockToCompartment2(stock5);
+		Stock stock6 = new Stock("10", "flammable", "Apple", "Good", "12/25/2025");
+		inv.addStockToCompartment2(stock6);
+		Stock stock7 = new Stock("10", "flammable", "Apple", "Good", "12/25/2025");
+		inv.addStockToCompartment2(stock7);
+		Stock stock8 = new Stock("10", "flammable", "Apple", "Good", "12/25/2025");
+		inv.addStockToCompartment2(stock8);
+		Stock stock9 = new Stock("10", "flammable", "Apple", "Good", "12/25/2025");
+		inv.addStockToCompartment2(stock9);
+		Stock stock10 = new Stock("10", "flammable", "Apple", "Good", "12/25/2025");
+		inv.addStockToCompartment2(stock10);
+		
+		boolean actual = inv.hasFreeSpace();
+		
+		assertFalse(actual);
+	
+	}
 
 }

@@ -30,7 +30,6 @@ public class Stock {
 		
 	}
 	
-	
 	/**
 	 * this method will get the size
 	 * @return returns size

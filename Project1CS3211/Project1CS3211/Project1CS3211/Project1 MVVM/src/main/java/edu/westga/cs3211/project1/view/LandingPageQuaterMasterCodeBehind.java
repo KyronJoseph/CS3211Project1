@@ -8,10 +8,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 
+/**
+ * this class is the Code Behind class for the QuarterMaster Landing page
+ * @author Kyron Joseph
+ * @version 11/15/2025
+ */
 public class LandingPageQuaterMasterCodeBehind {
 	
 	@FXML
-	private Pane ViewPane;
+	private Pane viewPane;
 
     @FXML
     private Button addStockBtn;
@@ -26,8 +31,8 @@ public class LandingPageQuaterMasterCodeBehind {
     void addItemOnAction(ActionEvent event) throws IOException {
     	FXMLLoader loader = new FXMLLoader(getClass().getResource("AddItemView.fxml"));
     	Pane newContent = loader.load();
-        ViewPane.getChildren().clear();
-        ViewPane.getChildren().add(newContent);
+        this.viewPane.getChildren().clear();
+        this.viewPane.getChildren().add(newContent);
 
     }
 
@@ -35,17 +40,16 @@ public class LandingPageQuaterMasterCodeBehind {
     void logOutOnAction(ActionEvent event) throws IOException {
     	FXMLLoader loader = new FXMLLoader(getClass().getResource("LoginView.fxml"));
     	Pane newContent = loader.load();
-        ViewPane.getChildren().clear();
-        ViewPane.getChildren().add(newContent);
+        this.viewPane.getChildren().clear();
+        this.viewPane.getChildren().add(newContent);
     }
-    
 
     @FXML
     void reviewOnAction(ActionEvent event) throws IOException {
     	FXMLLoader loader = new FXMLLoader(getClass().getResource("StockChangesView.fxml"));
     	Pane newContent = loader.load();
-        ViewPane.getChildren().clear();
-        ViewPane.getChildren().add(newContent);
+        this.viewPane.getChildren().clear();
+        this.viewPane.getChildren().add(newContent);
 
     }
     
@@ -53,10 +57,9 @@ public class LandingPageQuaterMasterCodeBehind {
     void goHomeOnAction(ActionEvent event) throws IOException {
     	FXMLLoader loader = new FXMLLoader(getClass().getResource("HomepageView.fxml"));
     	Pane newContent = loader.load();
-        ViewPane.getChildren().clear();
-        ViewPane.getChildren().add(newContent);
+        this.viewPane.getChildren().clear();
+        this.viewPane.getChildren().add(newContent);
 
     }
-
 
 }

@@ -8,20 +8,12 @@ import java.util.ArrayList;
  */
 public class Inventory {
 	
-	ArrayList<Stock> comparment1 = new ArrayList<Stock>();
-	ArrayList<Stock> compartment2 = new ArrayList<Stock>();
+    private ArrayList<Stock> comparment1 = new ArrayList<Stock>();
+	private ArrayList<Stock> compartment2 = new ArrayList<Stock>();
 	
-	
-	/**
-	 * the constructor for Inventory class
-	 * @param compartments takes param of compartments
+	/**the constructor for Inventory class
 	 */
 	public Inventory() {
-		//this.compartments = compartments;
-		//if (compartments.isEmpty()) {
-		//	throw new IllegalArgumentException("cannot have 0 compartments");
-		//}
-		
 
 	}
 	
@@ -30,15 +22,21 @@ public class Inventory {
 	 * @return returns false
 	 */
 	public boolean hasFreeSpace() {
-		return !(this.comparment1.size() >= 10 && this.compartment2.size() >= 10);
+		return !(this.comparment1.size() >= 10 || this.compartment2.size() >= 10);
 		
 	}
 
 	/** this will add stock to specific compartment
 	 * @param stock takes a param of stock
 	 */
-	public void addStock(Stock stock) {
+	public void addStockToCompartment1(Stock stock) {
 		this.comparment1.add(stock);
+	}
+	
+	/** this will add stock to specific compartment
+	 * @param stock takes a param of stock
+	 */
+	public void addStockToCompartment2(Stock stock) {
 		this.compartment2.add(stock);
 	}
 	

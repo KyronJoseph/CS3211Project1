@@ -3,7 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane fx:id="ViewPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.westga.cs3211.project1.view.LandingPageQuaterMasterCodeBehind">
+<Pane fx:id="viewPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.westga.cs3211.project1.view.LandingPageQuaterMasterCodeBehind">
    <children>
       <Button fx:id="addStockBtn" layoutX="175.0" layoutY="105.0" mnemonicParsing="false" onAction="#addItemOnAction" text="Add Stock" />
       <Button fx:id="reviewStockBtn" layoutX="175.0" layoutY="154.0" mnemonicParsing="false" onAction="#reviewOnAction" text="Review Stock Changes" />
